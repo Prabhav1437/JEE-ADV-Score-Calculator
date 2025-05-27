@@ -4,8 +4,12 @@ import requests
 
 
 def calc_marks(url, answer_key):
+    headers = {
+    "Accept-Language": "en-US,en;q=0.9",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",}
+    
     legend = {'A':0,'B':1,'C':2,'D':3}
-    response = requests.get(url).content
+    response = requests.get(url, headers = headers).content
 
     soup = BeautifulSoup(response, 'html.parser')
 
