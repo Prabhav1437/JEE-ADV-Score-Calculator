@@ -48,8 +48,7 @@ def calc_marks(url, answer_key):
             for j in range(0,8,2):
                 dict[dat[j].text] = dat[j+1].text
         resp.append(dict)
-
-    print(resp)
+        
     
     for x in resp:
         if x['Status :'] == 'Not Answered':
