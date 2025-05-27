@@ -6,8 +6,7 @@ import requests
 def calc_marks(url, answer_key):
     headers = {
     "Accept-Language": "en-US,en;q=0.9",
-    "User-Agent": '''Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
-sec-ch-ua: "Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"'''}
+    "User-Agent": '''Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'''}
     
     legend = {'A':0,'B':1,'C':2,'D':3}
     response = requests.get(url, headers = headers).content
