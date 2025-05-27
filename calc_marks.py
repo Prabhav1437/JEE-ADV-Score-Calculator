@@ -55,7 +55,10 @@ def calc_marks(url, answer_key):
         
     
     for x in resp:
-        if x['Status :'] == 'Not Answered':
+        if x['Question ID :'] == '695658629':
+            marks = marks + 3
+            
+        elif x['Status :'] == 'Not Answered':
             pass
 
         elif x['Status :'] == 'Answered':
