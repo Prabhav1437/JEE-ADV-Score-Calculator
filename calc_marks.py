@@ -37,7 +37,7 @@ def calc_marks(url, answer_key):
             for j in range(0,6,2):
                 dict[dat[j].text] = dat[j+1].text
             i = menu_tbl.index(t)
-            if dat[5].text == 'Answered':
+            if dat[5].text == 'Answered' or dat[5].text == 'Marked For Review':
                 ans = float(ques_blocks[i].find_all('tr')[2].find_all('td')[2].text)
             else:
                 ans = ques_blocks[i].find_all('tr')[2].find_all('td')[2].text
